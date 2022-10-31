@@ -1,0 +1,8 @@
+com\example\demo\DemoApplication.class
+com\example\demo\exception\ResourceNotFoundException.class
+com\example\demo\controller\assetController.class
+com\example\demo\repository\AssetRepository.class
+com\example\demo\model\User.class
+com\example\demo\controller\userController.class
+com\example\demo\model\Asset.class
+com\example\demo\repository\UserRepository.class

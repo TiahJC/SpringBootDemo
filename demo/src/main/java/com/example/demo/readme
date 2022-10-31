@@ -1,0 +1,54 @@
+Steps to SpringBoot - PostgreSQL
+
+Download PostgreSQL and PGadmin
+Download IDE with jdk and maven package - Recommended to download LTS version Long Term Service
+Setup PostgreSQL using PGadmin
+Follow Google PGadmin
+
+pom.xml at current main file
+Open pom.xml and add Dependency for :
+
+1. spring-boot-starter-data-jpa
+   <!-- <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-data-jpa</artifactId>
+         </dependency> -->
+2. spring-boot-starter-web
+   <!-- <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-web</artifactId>
+         </dependency> -->
+
+3. PostgreSQL
+   <!-- <dependency>
+             <groupId>org.postgresql</groupId>
+             <artifactId>postgresql</artifactId>
+             <scope>runtime</scope>
+         </dependency> -->
+
+application.properties file is at src/main/resources
+
+Connect PostgreSQL database to Spring
+Open application.properties file at resources
+spring.datasource.url= jdbc:postgresql://localhost:5432/testdb
+spring.datasource.username= postgres
+spring.datasource.password= 123
+
+          spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation= true
+          spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
+
+          # Hibernate ddl auto (create, create-drop, validate, update)
+          spring.jpa.hibernate.ddl-auto= update
+
+Define Data Model
+package file
+import javax.persistance.\*
+@Entity, @Table, @Id, @GeneratedValue,@Column
+
+Privileges -> Postgres go and study
+Foreign Key ->
+Spring
+SpringBoot
+Repository Interface
+Hibernate
+API?
